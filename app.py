@@ -1,12 +1,12 @@
 import streamlit as st
 from model import predict_text, explain_prediction
-from facets import FACETS   # 🔥 NEW (scalability)
+from facets import FACETS   #(scalability)
 import plotly.graph_objects as go
 
 st.set_page_config(page_title="FacetFlow", layout="centered")
 
 # -------------------------
-# 🎯 HEADER
+# HEADER
 # -------------------------
 st.markdown("""
 ### 🎯 Evaluate conversational responses across multiple facets:
@@ -20,20 +20,20 @@ st.markdown("""
 st.title("🔥 FacetFlow - Conversation Evaluator")
 
 # -------------------------
-# 💡 EXAMPLES
+# EXAMPLES
 # -------------------------
 st.markdown("### 💡 Try examples:")
 st.code("I hate you, you are useless")
 st.code("Thank you so much for your help!")
 
 # -------------------------
-# ✍ INPUT
+# INPUT
 # -------------------------
 text = st.text_area("Enter Response")
 prev = st.text_area("Previous Context (Optional)")
 
 # -------------------------
-# 🚀 EVALUATE
+# EVALUATE
 # -------------------------
 if st.button("Evaluate"):
 
@@ -42,7 +42,7 @@ if st.button("Evaluate"):
     confidence = output["confidence"]
 
     # -------------------------
-    # 📊 SCORES (CONFIG BASED)
+    # SCORES (CONFIG BASED)
     # -------------------------
     st.subheader("📊 Scores")
 
@@ -50,7 +50,7 @@ if st.button("Evaluate"):
         st.write(f"**{facet.capitalize()}**: {scores[facet]}/4")
 
     # -------------------------
-    # 🔍 CONFIDENCE
+    # CONFIDENCE
     # -------------------------
     st.subheader("🔍 Confidence")
 
@@ -58,7 +58,7 @@ if st.button("Evaluate"):
         st.write(f"**{facet.capitalize()}**: {confidence[facet]}")
 
     # -------------------------
-    # 📈 RADAR CHART
+    # RADAR CHART
     # -------------------------
     fig = go.Figure()
 
@@ -79,7 +79,7 @@ if st.button("Evaluate"):
     st.plotly_chart(fig)
 
     # -------------------------
-    # 🧠 EXPLANATION
+    # EXPLANATION
     # -------------------------
     st.subheader("🧠 Explanation")
 
