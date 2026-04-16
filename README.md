@@ -24,7 +24,7 @@ The system is designed to support **300–5000+ evaluation facets** using a modu
 - ✅ Interactive Streamlit UI with radar visualization  
 - ✅ Auto-labeled dataset (50+ diverse conversations)  
 - ✅ Lightweight system (no heavy LLM dependency)  
-- ✅ Docker-ready deployment  
+
 
 ---
 
