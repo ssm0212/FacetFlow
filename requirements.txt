@@ -1,0 +1,7 @@
+streamlit
+plotly
+numpy
+pandas
+textblob
+sentence-transformers
+scikit-learn
