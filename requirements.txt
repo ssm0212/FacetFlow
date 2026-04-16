@@ -5,3 +5,5 @@ pandas
 textblob
 sentence-transformers
 scikit-learn
+detoxify
+torch
