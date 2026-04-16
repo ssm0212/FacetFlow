@@ -97,7 +97,7 @@ def predict_text(text, prev_text=None):
 
 def explain_prediction(text, prev_text=None):
     output = predict_text(text, prev_text)
-    pred = output["scores"]   # 🔥 IMPORTANT FIX
+    pred = output["scores"]   # IMPORTANT FIX
 
     explanations = []
 
